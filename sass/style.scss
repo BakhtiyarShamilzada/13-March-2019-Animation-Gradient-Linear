@@ -1,0 +1,135 @@
+body
+{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxbig
+{
+    height: 200px;
+    width: 700px;
+    transform: rotate3d(45, 70, -45, 75deg);
+    background: lightcoral;
+    box-shadow: 0px 5px 12px grey;
+    transition: all 1s;
+    &:hover
+    {
+        .boxlittle
+        {
+            top:-70px;
+            left: 60px;
+        }
+        .boxsmall
+        {
+            top:-30px;
+            left: 50px;
+        }
+    }
+}
+.boxlittle
+{
+     transition: all 1s;
+    position: relative;
+    top: 0;
+    left:0;
+    width: 150px;
+    height: 100px;
+    background: lightblue;
+    box-shadow: 0px 5px 12px grey;
+}
+.boxsmall
+{
+     transition: all 1s;
+    position: relative;
+    top: 0;
+    left:0;
+    width: 100px;
+    height: 80px;
+    background: lightseagreen;
+    box-shadow: 0px 5px 12px grey;
+}
+.mobil
+{
+    width: 250px;
+    height: 500px;
+    background: black;
+    border-radius: 40px;
+    box-shadow: 0px 5px 12px grey;
+    .screen
+    {
+        border-radius: 30px;
+        width: 235px;
+        height: 485px;
+        background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+        animation: screen 10s infinite;
+        background-attachment: fixed;
+        background-size: 200% 100%;
+    }
+    @keyframes screen
+    {
+        0% {background-position: 0%, 50%;}
+        50% {background-position: 100%, 50%;}
+        100% {background-position: 0%, 50%;}
+    }
+    .camera
+    {
+        position: relative;
+        background: black;
+        width: 135px;
+        height: 27px;
+        border-radius: 10px;
+        top: -7px;
+        .sound
+        {
+            width: 33%;
+            height: 2px;
+            background: #222222;
+        }
+        .lens
+        {
+            width: 5px;
+            height: 5px;
+            background: #0A2B4C;
+            border-radius: 100%;
+        }
+    }
+    .lock
+    {
+        &:hover
+        {
+            .lock-top
+            {
+                transform: scale(-1, 1);
+                left: 9px;
+            }
+        }
+    }
+    .lock-top
+    {
+        position: relative;
+        left: 0;
+        transition: .3s;
+        width: 16px;
+        height: 10px;
+        border: 2px solid white;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
+        border-bottom: 0px;
+    }
+    .lock-bottom
+    {
+        background: white;
+        width: 20px;
+        height: 15px;
+        border-radius: 1px;
+    }
+    .hr
+    {
+        width: 40%;
+        height: 2px;
+        background: white;
+    }
+}
